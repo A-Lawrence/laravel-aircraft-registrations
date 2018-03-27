@@ -1,8 +1,8 @@
 <?php namespace ALawrence\LaravelAircraftRegistration\Facades;
 
-use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\Facade as BaseFacade;
 
-class Facade extends Facade {
+class Facade extends BaseFacade {
     /**
      * Get the registered name of the component.
      *

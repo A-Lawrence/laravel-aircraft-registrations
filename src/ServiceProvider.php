@@ -1,8 +1,8 @@
 <?php namespace ALawrence\LaravelAircraftRegistration;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class ServiceProvider extends ServiceProvider
+class ServiceProvider extends BaseServiceProvider
 {
     /**
      * Bootstrap all application events.
@@ -11,7 +11,9 @@ class ServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app['validator']->extendDependent('aircraftreg', Validator::class . '@validate');
+
+        // TODO: Register Rules\AircraftRegistration once written.
     }
 
     /**
@@ -21,7 +23,7 @@ class ServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        \App::bind("aircraft-registration", function(){
+        \App::bind("aircraft-registration", function () {
             return new AircraftRegistration();
         });
     }
