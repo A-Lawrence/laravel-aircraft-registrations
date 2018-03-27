@@ -1,5 +1,5 @@
 <?php namespace ALawrence\LaravelAircraftRegistration\Rules;
 
-class AircraftRegistration {
-
+class AircraftRegistration
+{
 }

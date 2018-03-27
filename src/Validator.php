@@ -20,7 +20,7 @@ class Validator
     public function validate($attribute, $value, array $parameters, $validator)
     {
         foreach ($this->extractCountries($parameters) as $country) {
-            if(AircraftRegistration::make($value, $country)->isValid()){
+            if (AircraftRegistration::make($value, $country)->isValid()) {
                 return true;
             }
         }
