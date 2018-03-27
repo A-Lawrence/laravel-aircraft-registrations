@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class AircraftRegistrationServiceProvider extends ServiceProvider
+class ServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap all application events.

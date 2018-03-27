@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class AircraftRegistration extends Facade {
+class Facade extends Facade {
     /**
      * Get the registered name of the component.
      *
